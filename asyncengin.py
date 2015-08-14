@@ -10,7 +10,7 @@ import random
 
 loop = asyncio.get_event_loop()
 
-aiohttp_errors = (aiohttp.errors.TimeoutError, aiohttp.errors.ClientConnectionError, aiohttp.errors.OsConnectionError, aiohttp.errors.IncompleteRead)
+aiohttp_errors = (aiohttp.errors.TimeoutError, aiohttp.errors.ClientConnectionError)
 
 @asyncio.coroutine
 def httptasker(reqs, retry=3):
