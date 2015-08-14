@@ -22,8 +22,6 @@ def req_gen(url, baseurl='', method='GET', session=None):
             'method': method,
             'url': url,
             'headers':headers,
-            'timeout': 10,
-            'session': session,
             }
 
 

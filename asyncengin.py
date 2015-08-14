@@ -24,7 +24,7 @@ def httptasker(reqs, retry=3):
             for i in range(retry):
                 try:
                     try:
-                        response = yield from aiohttp.request(**req)
+                        response = yield from asyncio.wait_for(aiohttp.request(**req), 5.0)
                         response.body = yield from response.read()
                         response.ourl = req['url']
                     finally:
